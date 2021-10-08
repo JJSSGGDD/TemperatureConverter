@@ -44,9 +44,10 @@
         app:layout_constraintTop_toBottomOf="@+id/appHeading">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/textSelect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginEnd="8dp"
             android:layout_weight="1"
             android:fontFamily="@font/raleway"
             android:text="@string/fahrenheit"
@@ -54,10 +55,28 @@
             android:textSize="18sp" />
 
         <ImageView
-            android:id="@+id/imageView2"
+            android:id="@+id/imgSelect"
             android:layout_width="20dp"
             android:layout_height="20dp"
             android:layout_weight="1"
             app:srcCompat="@drawable/ic_down_arrow" />
     </LinearLayout>
+
+    <EditText
+        android:id="@+id/editInput"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:background="@android:color/transparent"
+        android:ems="10"
+        android:fontFamily="sans-serif-light"
+        android:hint="32"
+        android:inputType="numberDecimal"
+        android:maxLength="6"
+        android:textAlignment="center"
+        android:textColorHint="@color/white"
+        android:textSize="44sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/selectType" />
 </androidx.constraintlayout.widget.ConstraintLayout>
