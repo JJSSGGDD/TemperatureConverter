@@ -3,4 +3,5 @@
     <string name="appHeading" />
     <string name="AppTitle">"Temperature Converter "</string>
     <string name="AppHeading">Temperature Converter</string>
+    <string name="fahrenheit">"Fahrenheit "</string>
 </resources>
