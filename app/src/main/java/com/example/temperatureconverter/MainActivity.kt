@@ -28,8 +28,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         //Initilizing Views
-        selectedUnitLayout = findViewById<>(R.id.selectType)
-        selectedUnitText = findViewById(R.id.selectType)
+        selectedUnitLayout = findViewById(R.id.selectType)
+        selectedUnitText = findViewById(R.id.textResultType)
         editInput = findViewById(R.id.editInput)
         textResult = findViewById(R.id.textResultType)
         resultTypeText = findViewById(R.id.textResult)
