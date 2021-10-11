@@ -15,9 +15,10 @@
         android:scaleType="centerCrop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/red_bg" />
 
     <TextView
@@ -83,7 +84,7 @@
         app:layout_constraintTop_toBottomOf="@+id/selectType" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textResultType"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="256dp"
@@ -96,7 +97,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editInput" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textResult"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@font/raleway"
@@ -106,5 +107,5 @@
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textResultType" />
 </androidx.constraintlayout.widget.ConstraintLayout>
