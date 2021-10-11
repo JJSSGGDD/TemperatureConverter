@@ -2,7 +2,6 @@ package com.example.temperatureconverter
 
 import android.app.AlertDialog
 import android.content.DialogInterface
-import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.EditText
@@ -32,8 +31,8 @@ class MainActivity : AppCompatActivity() {
         selectedUnitLayout = findViewById<>(R.id.selectType)
         selectedUnitText = findViewById(R.id.selectType)
         editInput = findViewById(R.id.editInput)
-        textResult = findViewById(R.id.textResult)
-        resultTypeText = findViewById(R.id.textResultType)
+        textResult = findViewById(R.id.textResultType)
+        resultTypeText = findViewById(R.id.textResult)
 
         //by Default Fahrenheit is input unit
         selectedUnit = "Fahrenheit"
