@@ -67,7 +67,7 @@ class MainActivity : AppCompatActivity() {
     private fun showAlertDialog() {
         var alertDialog: AlertDialog.Builder = AlertDialog.Builder(this@MainActivity)
         alertDialog.setTitle("Select Input Unit ") //   Setting title of alert dialog
-        val items = arrayOf("Fahrenheit", "Celsius") // Options in alert Dialog
+        val items = arrayOf("Fahrenheit", "Celsius", "Kelvin") // Options in alert Dialog
         val checkedItem = -1 //No item by default selected
 
         alertDialog.setSingleChoiceItems(items, checkedItem,
