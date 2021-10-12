@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     private lateinit var selectedUnitText: TextView
     private lateinit var editInput: EditText
     private lateinit var textResult: TextView
-    private lateinit var resultTypeText: TextView
+    private lateinit var textResultType: TextView
 
     //Input Type
     private lateinit var selectedUnit: String
@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity() {
 
         //Initilizing Views
         selectedUnitLayout = findViewById(R.id.selectType)
-        selectedUnitText = findViewById(R.id.textResult)
+        selectedUnitText = findViewById(R.id.textSelect)
         editInput = findViewById(R.id.editInput)
         textResult = findViewById(R.id.textResult)
-        resultTypeText = findViewById(R.id.textResultType)
+        textResultType = findViewById(R.id.textResultType)
 
         //by Default Fahrenheit is input unit
         selectedUnit = "Fahrenheit"
@@ -45,21 +45,21 @@ class MainActivity : AppCompatActivity() {
         editInput.addTextChangedListener() {
             var resultText: String = ""
             var inputVal = editInput.text.toString()
+
             val df = DecimalFormat("#.##")
 
             if (inputVal.isNotEmpty()) {
-                var doubleInput = inputVal.toDouble()
+                var doubleInput = inputVal.toDouble() // To convert string to double
+                //Taking decision as per current Input type
                 if (selectedUnit == "Fahrenheit") {
                     resultText = df.format((doubleInput - 32) * 5 / 9)
-                    selectedUnitText.text = "Celsius"
+                    textResultType.text = "Celsius"
                 } else {
                     //(0°C × 9/5) + 32
                     resultText = df.format((doubleInput * 9 / 5) + 32)
-                    selectedUnitText.text = "Fahrenheit"
+                    textResultType.text = "Fahrenheit"
                 }
-
-                selectedUnitText.text = resultText
-
+                textResult.text = resultText
             }
         }
     }
