@@ -29,10 +29,10 @@ class MainActivity : AppCompatActivity() {
 
         //Initilizing Views
         selectedUnitLayout = findViewById(R.id.selectType)
-        selectedUnitText = findViewById(R.id.textResultType)
+        selectedUnitText = findViewById(R.id.textResult)
         editInput = findViewById(R.id.editInput)
-        textResult = findViewById(R.id.textResultType)
-        resultTypeText = findViewById(R.id.textResult)
+        textResult = findViewById(R.id.textResult)
+        resultTypeText = findViewById(R.id.textResultType)
 
         //by Default Fahrenheit is input unit
         selectedUnit = "Fahrenheit"
