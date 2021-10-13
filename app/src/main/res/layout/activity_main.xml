@@ -105,30 +105,33 @@
         android:fontFamily="@font/raleway"
         android:textColor="@android:color/holo_red_light"
         android:textSize="18sp"
+        app:layout_constraintBottom_toTopOf="@+id/textResult2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textResult" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/textResult2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
-        android:text="TextView"
+        android:layout_marginTop="60dp"
+        android:text="@string/textRes2"
+        android:textColor="@android:color/holo_red_light"
+        android:textSize="44sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textResultType" />
+        app:layout_constraintTop_toBottomOf="@+id/textResult" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textResultType2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
+        android:textColor="@android:color/holo_red_light"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/textResult2" />
 </androidx.constraintlayout.widget.ConstraintLayout>

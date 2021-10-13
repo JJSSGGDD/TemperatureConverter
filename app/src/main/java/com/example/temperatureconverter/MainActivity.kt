@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
     private lateinit var editInput: EditText
     private lateinit var textResult: TextView
     private lateinit var textResultType: TextView
+    private lateinit var textResult2: TextView
+    private lateinit var textResultType2: TextView
 
     //Input Type
     private lateinit var selectedUnit: String
@@ -33,6 +35,8 @@ class MainActivity : AppCompatActivity() {
         editInput = findViewById(R.id.editInput)
         textResult = findViewById(R.id.textResult)
         textResultType = findViewById(R.id.textResultType)
+        textResult2 = findViewById(R.id.textResult2)
+        textResultType2 = findViewById(R.id.textResultType2)
 
         //by Default Fahrenheit is input unit
         selectedUnit = "Fahrenheit"
@@ -44,6 +48,7 @@ class MainActivity : AppCompatActivity() {
 
         editInput.addTextChangedListener() {
             var resultText: String = ""
+            var resultText2: String = ""
             var inputVal = editInput.text.toString()
 
             val df = DecimalFormat("#.##")
@@ -54,12 +59,30 @@ class MainActivity : AppCompatActivity() {
                 if (selectedUnit == "Fahrenheit") {
                     resultText = df.format((doubleInput - 32) * 5 / 9)
                     textResultType.text = "Celsius"
-                } else {
+
+                    resultText2 = df.format(((doubleInput - 32) * 5 / 9) + 273.15)
+                    textResultType2.text = "Kelvin"
+
+
+                } else if (selectedUnit == "Kelvin") {
+                    // Convertir a kelvin
+                    resultText = df.format(((doubleInput - 273.15) * 9 / 5) + 32)
+                    textResultType.text = "Fahrenheit"
+
+                    resultText2 = df.format((doubleInput - 273.15))
+                    textResultType2.text = "Celsius"
+
+                } else  {
                     //(0°C × 9/5) + 32
                     resultText = df.format((doubleInput * 9 / 5) + 32)
                     textResultType.text = "Fahrenheit"
+
+                    resultText2 = df.format((doubleInput + 273.15))
+                    textResultType2.text = "Kelvin"
                 }
+
                 textResult.text = resultText
+                textResult2.text = resultText2
             }
         }
     }
